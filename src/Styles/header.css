@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    border-bottom: 1px solid #4dc875;
+    background-color: #4dc875;
+    position: sticky;
+    padding: 1rem 2rem;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 10px;
+}
+.header__left{
+    display: flex;
+    align-items: center;
+}
+.header__left img{
+    margin-right: 3rem;
+}
+.header__right {
+    display: flex;
+    align-items: center;
+}
+.header__right form {
+    margin-right: 1rem;
+}

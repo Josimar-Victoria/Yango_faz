@@ -1,0 +1,25 @@
+.post {
+display: flex;
+flex-direction: column;
+}
+.post__body{
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+    border-radius: 1rem;
+    border: 1px solid #4dc875;
+    padding: 1rem;
+    margin:1rem;
+    width: 50%;
+    margin: 0 auto;
+}
+.avatar{
+    margin-top: -2rem;
+    margin-left: -2rem;
+}
+.like__buttom{
+    margin-left: 16.6rem;
+}
+.post__iconDele:hover{
+color: #4dc875;
+}
