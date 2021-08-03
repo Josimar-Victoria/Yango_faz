@@ -17,7 +17,12 @@ flex-direction: column;
     margin-top: -2rem;
     margin-left: -2rem;
 }
-.like__buttom{
+.post__name{
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    
+}
+.post__icons{
     margin-left: 16.6rem;
 }
 .post__iconDele:hover{

@@ -11,6 +11,9 @@
     align-items:center;
     border-bottom: #4dc875;
 }
+.sidebar__top img{
+    height:4rem;
+}
 .sidebar__bottom{
     margin-top:2rem;
 }

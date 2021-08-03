@@ -6,7 +6,7 @@ import { useStateValue } from '../StateProvide';
 import { actionsTypes } from '../reducer'
 import { auth } from '../firebase'
 export const Header = () => {
-    const [{isopen, user}, dispatch] = useStateValue();
+    const [{isopen, user, darkMode}, dispatch] = useStateValue();
 
     const toggleMenu = () => {
         dispatch({
@@ -32,11 +32,15 @@ export const Header = () => {
             </div>
             <div className="header__right">
                 <Avatar src={user?.photoURL}/>
-              
                 {
                     user && <Button onClick={signOut}>Sigm out</Button>
                 }
-                  <Switch/>
+                <Switch checked={darkMode} onChange={() => {
+                    dispatch({
+                        type:actionsTypes.SET_DARKMODE,
+                        darkMode: !darkMode,
+                    })
+                }}/>
             </div>
         </div>
     )
