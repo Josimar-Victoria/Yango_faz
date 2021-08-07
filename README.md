@@ -1,9 +1,10 @@
-# Getting Started with Create React App
 
+# Yango_faz una app en desarro pensada para los usuarios poco comunes que les agrade interatuar con personas randon 
 <img src='https://github.com/Josimar-Victoria/Yango_faz/blob/main/Captura%20de%20pantalla%20de%202021-08-07%2016-42-51.png?raw=true' alt='log'/>
 
 <img src='https://github.com/Josimar-Victoria/Yango_faz/blob/main/Captura%20de%20pantalla%20de%202021-08-07%2016-42-57.png?raw=true' alt='log'/>
 
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
