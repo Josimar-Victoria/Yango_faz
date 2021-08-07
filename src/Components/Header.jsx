@@ -1,7 +1,7 @@
 import '../Styles/header.css'
 import MenuIcon from '@material-ui/icons/Menu';
 import Avatar from '@material-ui/core/Avatar';
-import { Button, IconButton, Switch } from '@material-ui/core';
+import { Button,  IconButton, Switch } from '@material-ui/core';
 import { useStateValue } from '../StateProvide';
 import { actionsTypes } from '../reducer'
 import { auth } from '../firebase'
@@ -23,25 +23,27 @@ export const Header = () => {
     }
 
     return (
-        <div className="header">
-            <div className="header__left">
-                <img width='40px' src='http://www.edutic.pe/galeria/storage/cache/images/000/057/letra-MAYUS-azul-10,medium.2x.1532902910.png' alt="logo" />
-                <IconButton onClick={toggleMenu}>
-                    <MenuIcon fontSize="large"/>
-                </IconButton>
+       
+            <div className="header">
+                <div className="header__left">
+                    <img width='40px' src='http://www.edutic.pe/galeria/storage/cache/images/000/057/letra-MAYUS-azul-10,medium.2x.1532902910.png' alt="logo" />
+                    <IconButton onClick={toggleMenu}>
+                        <MenuIcon fontSize="large"/>
+                    </IconButton>
+                </div>
+                <div className="header__right">
+                    <Avatar src={user?.photoURL}/>
+                    {
+                        user && <Button onClick={signOut}>Sigm out</Button>
+                    }
+                    <Switch checked={darkMode} onChange={() => {
+                        dispatch({
+                            type:actionsTypes.SET_DARKMODE,
+                            darkMode: !darkMode,
+                        })
+                    }}/>
+                </div>
             </div>
-            <div className="header__right">
-                <Avatar src={user?.photoURL}/>
-                {
-                    user && <Button onClick={signOut}>Sigm out</Button>
-                }
-                <Switch checked={darkMode} onChange={() => {
-                    dispatch({
-                        type:actionsTypes.SET_DARKMODE,
-                        darkMode: !darkMode,
-                    })
-                }}/>
-            </div>
-        </div>
+        
     )
 }

@@ -5,6 +5,7 @@ import '../Styles/sidebar.css';
 export const Sidebar = () => {
     const [{user}] = useStateValue()
     const [weatherdata, setweatherdata] = useState()
+
    console.log(weatherdata);
     useEffect(() => {
         const successCallback = (position) => {
@@ -21,7 +22,6 @@ export const Sidebar = () => {
 .then(data => setweatherdata(data))
         }
         const errorCallback = err => console.log(err)
-       
         navigator.geolocation.getCurrentPosition(successCallback, errorCallback)
     },[])
     return (

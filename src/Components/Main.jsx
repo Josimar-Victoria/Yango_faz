@@ -15,6 +15,10 @@ export const Main = () => {
         text: ''
     })
 
+            const handleTitel = (e) => {
+            setinput({title: e.target.value} )
+        }
+
     useEffect(() => {
         db.collection("posts").orderBy("timestamp", "desc")
         .onSnapshot(snapshot => 
@@ -36,7 +40,6 @@ export const Main = () => {
                 ismencanta: false,
                 username: user?.displayName,
                 avatar: user?.photoURL,
-
             })
             setinput({
                 title: '',
@@ -51,12 +54,12 @@ export const Main = () => {
     return (
         <div className="main">
             <div className="main__input">
-                <form  noValidate autoComplete="off">
+                <form  noValidate autoComplete="off" onSubmit={handleSubmit}>
                     <div className="main__inputForm">
-                        <TextField value={input.title} onChange={e => setinput({...input, title: e.target.value})} id="standard-basic" label="Title" />
+                        <TextField value={input.title} onChange={handleTitel} id="standard-basic" label="Title" />
                         <TextField value={input.text} onChange={e => setinput({...input, text: e.target.value})} className="main__inpuntFormText" id="outlined-basic" label="Agg Text...." variant="outlined" />
                     </div> 
-                    <button type="submit" className="button" onClick={handleSubmit}></button>
+                    <button  className="button"></button> 
                 </form>
             </div>
 
